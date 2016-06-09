@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name keyboard_parts)(type KiCad)(uri "/home/noname/Google Drive/KiCAD/keyboard_parts.pretty")(options "")(descr ""))
+  (lib (name Housings_DFN_QFN)(type KiCad)(uri /home/noname/kicad_sources/Housings_DFN_QFN.pretty)(options "")(descr ""))
+  (lib (name Pin_Headers)(type KiCad)(uri /home/noname/kicad_sources/Pin_Headers.pretty)(options "")(descr ""))
+)
