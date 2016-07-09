@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:KL27Z_breakout-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:mkl27z256vfm4
 LIBS:keyboard_parts
+LIBS:KL27Z_breakout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -45,7 +47,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MKL27Z256VFM4 U1
+L MKL27Z256VFM4-RESCUE-KL27Z_breakout U1
 U 1 1 57578DE2
 P 5400 2350
 F 0 "U1" H 5400 3250 60  0000 C CNN
@@ -302,35 +304,35 @@ F 3 "" H 4750 4125 50  0000 C CNN
 	1    4750 4125
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5975 3925 2    60   BiDi ~ 0
-PTD7
 Text GLabel 5975 4025 2    60   BiDi ~ 0
+PTD7
+Text GLabel 5975 4125 2    60   BiDi ~ 0
 PTD6
-Text GLabel 5975 4225 2    60   BiDi ~ 0
-PTD4
 Text GLabel 5975 4325 2    60   BiDi ~ 0
-PTC7
+PTD4
 Text GLabel 5975 4425 2    60   BiDi ~ 0
-PTC6
+PTC7
 Text GLabel 5975 4525 2    60   BiDi ~ 0
-PTC5
+PTC6
 Text GLabel 5975 4625 2    60   BiDi ~ 0
-PTC4
+PTC5
 Text GLabel 5975 4925 2    60   BiDi ~ 0
-PTC3
+PTC4
 Text GLabel 5975 5025 2    60   BiDi ~ 0
-PTC2
+PTC3
 Text GLabel 5975 5125 2    60   BiDi ~ 0
-PTC1
+PTC2
 Text GLabel 5975 5225 2    60   BiDi ~ 0
-PTB1
+PTC1
 Text GLabel 5975 5325 2    60   BiDi ~ 0
-PTB0
+PTB1
 Text GLabel 5975 5425 2    60   BiDi ~ 0
-PTA20
+PTB0
 Text GLabel 5975 5525 2    60   BiDi ~ 0
-PTA19
+PTA20
 Text GLabel 5975 5625 2    60   BiDi ~ 0
+PTA19
+Text GLabel 5025 5625 0    60   BiDi ~ 0
 PTA18
 Text Notes 4650 4450 2    60   ~ 0
 RESET_b(PTA20)
@@ -348,7 +350,7 @@ Text GLabel 5025 5525 0    60   BiDi ~ 0
 PTA4
 Text GLabel 5025 4025 0    60   Input ~ 0
 VREGIN
-Text GLabel 5025 4625 0    60   BiDi ~ 0
+Text GLabel 5975 3925 2    60   BiDi ~ 0
 PTE0
 $Comp
 L SW_PUSH SW1
@@ -387,36 +389,8 @@ F 3 "" H 2050 5225 50  0000 C CNN
 $EndComp
 Text GLabel 1750 5225 0    60   BiDi ~ 0
 PTA4
-Text GLabel 5025 4225 0    60   BiDi ~ 0
-PTA0
-Text GLabel 5025 4325 0    60   BiDi ~ 0
-PTA3
-Text GLabel 5025 4425 0    60   BiDi ~ 0
-PTA20
-$Comp
-L GND #PWR06
-U 1 1 57582552
-P 4725 4525
-F 0 "#PWR06" H 4725 4275 50  0001 C CNN
-F 1 "GND" H 4725 4375 50  0000 C CNN
-F 2 "" H 4725 4525 50  0000 C CNN
-F 3 "" H 4725 4525 50  0000 C CNN
-	1    4725 4525
-	0    1    1    0   
-$EndComp
 Text Notes 4650 4250 2    60   ~ 0
 SWD_CLK(PTA0)
-$Comp
-L GND #PWR07
-U 1 1 5758372E
-P 4750 5625
-F 0 "#PWR07" H 4750 5375 50  0001 C CNN
-F 1 "GND" H 4750 5475 50  0000 C CNN
-F 2 "" H 4750 5625 50  0000 C CNN
-F 3 "" H 4750 5625 50  0000 C CNN
-	1    4750 5625
-	0    1    1    0   
-$EndComp
 Text Notes 4700 5575 2    60   ~ 0
 NMI_b(PTA4)
 $Comp
@@ -501,18 +475,33 @@ Wire Wire Line
 	2950 3300 2950 3350
 Connection ~ 3300 3350
 Wire Wire Line
-	5025 4125 4750 4125
-Wire Wire Line
 	3300 2000 3300 3000
 Wire Wire Line
 	2350 4925 2350 5375
 Connection ~ 2350 5225
 Wire Wire Line
 	5025 4525 4725 4525
+Text GLabel 5975 4225 2    60   BiDi ~ 0
+PTD5
 Wire Wire Line
-	5025 5625 4750 5625
+	5025 4125 4750 4125
+$Comp
+L GND #PWR06
+U 1 1 57582552
+P 4725 4525
+F 0 "#PWR06" H 4725 4275 50  0001 C CNN
+F 1 "GND" H 4725 4375 50  0000 C CNN
+F 2 "" H 4725 4525 50  0000 C CNN
+F 3 "" H 4725 4525 50  0000 C CNN
+	1    4725 4525
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	5025 4925 4750 4925
-Text GLabel 5975 4125 2    60   BiDi ~ 0
-PTD5
+Text GLabel 5025 4425 0    60   BiDi ~ 0
+PTA20
+Text GLabel 5025 4325 0    60   BiDi ~ 0
+PTA3
+Text GLabel 5025 4225 0    60   BiDi ~ 0
+PTA0
 $EndSCHEMATC
