@@ -1,0 +1,123 @@
+Cmp-Mod V01 Created by PcbNew   date = Thu 09 Jun 2016 04:06:06 PM JST
+
+BeginCmp
+TimeStamp = 5758CAF3
+Path = /57578EE3
+Reference = J1;
+ValeurCmp = USB_mini_micro_B;
+IdModule  = keyboard_parts:USB_microB;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CAD4
+Path = /57579264
+Reference = C1;
+ValeurCmp = 4.7u;
+IdModule  = keyboard_parts:C_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CADA
+Path = /57579185
+Reference = C2;
+ValeurCmp = 2.2u;
+IdModule  = keyboard_parts:C_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CAE0
+Path = /575792EA
+Reference = C3;
+ValeurCmp = 0.1u;
+IdModule  = keyboard_parts:C_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CAE6
+Path = /575792B7
+Reference = C4;
+ValeurCmp = 0.1u;
+IdModule  = keyboard_parts:C_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB0B
+Path = /5757D0A4
+Reference = P2;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB17
+Path = /5757D031
+Reference = P3;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB29
+Path = /57578FBF
+Reference = R1;
+ValeurCmp = 33;
+IdModule  = keyboard_parts:R_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB2F
+Path = /57579008
+Reference = R2;
+ValeurCmp = 33;
+IdModule  = keyboard_parts:R_1608;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB35
+Path = /57579F73
+Reference = SJ1;
+ValeurCmp = SOLDER_JUMPER;
+IdModule  = keyboard_parts:SOLDER_JUMPER_2;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB3D
+Path = /57581720
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = keyboard_parts:SW_ALPS_SKRP;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB45
+Path = /57581A41
+Reference = SW2;
+ValeurCmp = SW_PUSH;
+IdModule  = keyboard_parts:SW_ALPS_SKRP;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB6D
+Path = /57578DE2
+Reference = U1;
+ValeurCmp = MKL27Z256VFM4;
+IdModule  = Housings_DFN_QFN:QFN-32-1EP_5x5mm_Pitch0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CAFF
+Path = /5757D54C
+Reference = P1;
+ValeurCmp = CONN_01X08;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+EndCmp
+
+BeginCmp
+TimeStamp = 5758CB23
+Path = /5757D546
+Reference = P4;
+ValeurCmp = CONN_01X08;
+IdModule  = keyboard_parts:Pin_Header_Straight_1x08;
+EndCmp
+
+EndListe
