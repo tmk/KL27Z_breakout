@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:KL27Z_breakout-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,6 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:mkl27z256vfm4
 LIBS:keyboard_parts
+LIBS:KL27Z_breakout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -64,18 +66,18 @@ F 1 "USB_mini_micro_B" H 1550 2100 60  0001 C CNN
 F 2 "" H 1650 1850 60  0001 C CNN
 F 3 "" H 1650 1850 60  0000 C CNN
 	1    1700 1850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
-NoConn ~ 1850 2000
+NoConn ~ 1850 1700
 $Comp
 L GND #PWR01
 U 1 1 57578F62
-P 2050 2375
-F 0 "#PWR01" H 2050 2125 50  0001 C CNN
-F 1 "GND" H 2050 2225 50  0000 C CNN
-F 2 "" H 2050 2375 50  0000 C CNN
-F 3 "" H 2050 2375 50  0000 C CNN
-	1    2050 2375
+P 2050 1650
+F 0 "#PWR01" H 2050 1400 50  0001 C CNN
+F 1 "GND" H 2050 1500 50  0000 C CNN
+F 2 "" H 2050 1650 50  0000 C CNN
+F 3 "" H 2050 1650 50  0000 C CNN
+	1    2050 1650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -168,7 +170,7 @@ F 3 "" H 4350 1400 50  0000 C CNN
 $EndComp
 Text GLabel 2825 2100 0    60   Input ~ 0
 VREGIN
-Text GLabel 2050 1700 2    60   Output ~ 0
+Text GLabel 2050 2000 2    60   Output ~ 0
 VBUS
 $Comp
 L SOLDER_JUMPER SJ1
@@ -265,72 +267,39 @@ F 3 "" H 5225 5275 50  0000 C CNN
 	1    5225 5275
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X08 P4
-U 1 1 5757D546
-P 5775 4275
-F 0 "P4" H 5775 4725 50  0000 C CNN
-F 1 "CONN_01X08" V 5875 4275 50  0000 C CNN
-F 2 "" H 5775 4275 50  0001 C CNN
-F 3 "" H 5775 4275 50  0000 C CNN
-	1    5775 4275
-	-1   0    0    1   
-$EndComp
-$Comp
-L CONN_01X08 P1
-U 1 1 5757D54C
-P 5225 4275
-F 0 "P1" H 5225 3825 50  0000 C CNN
-F 1 "CONN_01X08" V 5325 4275 50  0000 C CNN
-F 2 "" H 5225 4275 50  0001 C CNN
-F 3 "" H 5225 4275 50  0000 C CNN
-	1    5225 4275
-	1    0    0    -1  
-$EndComp
 Text Notes 4650 4350 2    60   ~ 0
 SWD_DIO(PTA3)
 Text GLabel 5025 3925 0    60   Input ~ 0
 VBUS
-$Comp
-L +3V3 #PWR04
-U 1 1 5757ECBC
-P 4750 4125
-F 0 "#PWR04" H 4750 3975 50  0001 C CNN
-F 1 "+3V3" H 4750 4265 50  0000 C CNN
-F 2 "" H 4750 4125 50  0000 C CNN
-F 3 "" H 4750 4125 50  0000 C CNN
-	1    4750 4125
-	0    -1   -1   0   
-$EndComp
-Text GLabel 5975 3925 2    60   BiDi ~ 0
+Text GLabel 5025 4325 0    60   BiDi ~ 0
 PTD7
-Text GLabel 5975 4025 2    60   BiDi ~ 0
+Text GLabel 5025 4225 0    60   BiDi ~ 0
 PTD6
-Text GLabel 5975 4225 2    60   BiDi ~ 0
+Text GLabel 5975 4025 2    60   BiDi ~ 0
 PTD4
-Text GLabel 5975 4325 2    60   BiDi ~ 0
+Text GLabel 5975 4125 2    60   BiDi ~ 0
 PTC7
-Text GLabel 5975 4425 2    60   BiDi ~ 0
+Text GLabel 5975 4225 2    60   BiDi ~ 0
 PTC6
-Text GLabel 5975 4525 2    60   BiDi ~ 0
+Text GLabel 5975 4325 2    60   BiDi ~ 0
 PTC5
-Text GLabel 5975 4625 2    60   BiDi ~ 0
+Text GLabel 5975 4425 2    60   BiDi ~ 0
 PTC4
-Text GLabel 5975 4925 2    60   BiDi ~ 0
-PTC3
 Text GLabel 5975 5025 2    60   BiDi ~ 0
-PTC2
+PTC3
 Text GLabel 5975 5125 2    60   BiDi ~ 0
-PTC1
+PTC2
 Text GLabel 5975 5225 2    60   BiDi ~ 0
-PTB1
+PTC1
 Text GLabel 5975 5325 2    60   BiDi ~ 0
-PTB0
+PTB1
 Text GLabel 5975 5425 2    60   BiDi ~ 0
-PTA20
+PTB0
 Text GLabel 5975 5525 2    60   BiDi ~ 0
-PTA19
+PTA20
 Text GLabel 5975 5625 2    60   BiDi ~ 0
+PTA19
+Text GLabel 5025 5625 0    60   BiDi ~ 0
 PTA18
 Text Notes 4650 4450 2    60   ~ 0
 RESET_b(PTA20)
@@ -348,7 +317,7 @@ Text GLabel 5025 5525 0    60   BiDi ~ 0
 PTA4
 Text GLabel 5025 4025 0    60   Input ~ 0
 VREGIN
-Text GLabel 5025 4625 0    60   BiDi ~ 0
+Text GLabel 5025 4425 0    60   BiDi ~ 0
 PTE0
 $Comp
 L SW_PUSH SW1
@@ -387,36 +356,8 @@ F 3 "" H 2050 5225 50  0000 C CNN
 $EndComp
 Text GLabel 1750 5225 0    60   BiDi ~ 0
 PTA4
-Text GLabel 5025 4225 0    60   BiDi ~ 0
-PTA0
-Text GLabel 5025 4325 0    60   BiDi ~ 0
-PTA3
-Text GLabel 5025 4425 0    60   BiDi ~ 0
-PTA20
-$Comp
-L GND #PWR06
-U 1 1 57582552
-P 4725 4525
-F 0 "#PWR06" H 4725 4275 50  0001 C CNN
-F 1 "GND" H 4725 4375 50  0000 C CNN
-F 2 "" H 4725 4525 50  0000 C CNN
-F 3 "" H 4725 4525 50  0000 C CNN
-	1    4725 4525
-	0    1    1    0   
-$EndComp
 Text Notes 4650 4250 2    60   ~ 0
 SWD_CLK(PTA0)
-$Comp
-L GND #PWR07
-U 1 1 5758372E
-P 4750 5625
-F 0 "#PWR07" H 4750 5375 50  0001 C CNN
-F 1 "GND" H 4750 5475 50  0000 C CNN
-F 2 "" H 4750 5625 50  0000 C CNN
-F 3 "" H 4750 5625 50  0000 C CNN
-	1    4750 5625
-	0    1    1    0   
-$EndComp
 Text Notes 4700 5575 2    60   ~ 0
 NMI_b(PTA4)
 $Comp
@@ -441,78 +382,120 @@ F 3 "" H 2950 2100 50  0000 C CNN
 	1    2950 2100
 	1    0    0    -1  
 $EndComp
+Text GLabel 5025 4125 0    60   BiDi ~ 0
+PTD5
 Wire Wire Line
-	3500 1800 4750 1800
+	2050 1500 2050 1650
 Wire Wire Line
-	3500 1900 4750 1900
+	5025 4925 4750 4925
+Connection ~ 2350 5225
 Wire Wire Line
-	2825 2100 4750 2100
+	2350 4925 2350 5375
 Wire Wire Line
-	1850 1800 3200 1800
+	3300 2000 3300 3000
+Connection ~ 3300 3350
 Wire Wire Line
-	1850 1900 3200 1900
+	2950 3300 2950 3350
+Connection ~ 2950 2100
 Wire Wire Line
-	1850 2100 2050 2100
+	2950 3000 2950 2100
 Wire Wire Line
-	2050 2100 2050 2375
+	3650 3300 3650 3350
+Connection ~ 4000 3350
+Connection ~ 4200 3350
 Wire Wire Line
-	1850 2200 2050 2200
-Connection ~ 2050 2200
+	3650 2200 3650 3000
+Connection ~ 4200 2300
 Wire Wire Line
-	1850 1700 2050 1700
+	4750 1700 4200 1700
+Connection ~ 4200 3100
 Wire Wire Line
-	3300 3300 3300 3350
-Wire Wire Line
-	4750 2200 3650 2200
-Wire Wire Line
-	4750 3000 4000 3000
-Wire Wire Line
-	4000 3300 4000 3350
-Wire Wire Line
-	2950 3350 4200 3350
-Connection ~ 3650 3350
-Wire Wire Line
-	3300 2000 4750 2000
-Wire Wire Line
-	4350 1400 4350 3000
-Connection ~ 4350 2200
-Connection ~ 4350 2000
-Connection ~ 4350 3000
-Wire Wire Line
-	4750 3100 4200 3100
+	4750 2300 4200 2300
 Wire Wire Line
 	4200 1700 4200 3425
 Wire Wire Line
-	4750 2300 4200 2300
-Connection ~ 4200 3100
+	4750 3100 4200 3100
+Connection ~ 4350 3000
+Connection ~ 4350 2000
+Connection ~ 4350 2200
 Wire Wire Line
-	4750 1700 4200 1700
-Connection ~ 4200 2300
+	4350 1400 4350 3000
 Wire Wire Line
-	3650 2200 3650 3000
-Connection ~ 4200 3350
-Connection ~ 4000 3350
+	3300 2000 4750 2000
+Connection ~ 3650 3350
 Wire Wire Line
-	3650 3300 3650 3350
+	2950 3350 4200 3350
 Wire Wire Line
-	2950 3000 2950 2100
-Connection ~ 2950 2100
+	4000 3300 4000 3350
 Wire Wire Line
-	2950 3300 2950 3350
-Connection ~ 3300 3350
+	4750 3000 4000 3000
 Wire Wire Line
-	5025 4125 4750 4125
+	4750 2200 3650 2200
 Wire Wire Line
-	3300 2000 3300 3000
+	3300 3300 3300 3350
 Wire Wire Line
-	2350 4925 2350 5375
-Connection ~ 2350 5225
+	1850 2000 2050 2000
+Connection ~ 2050 1600
 Wire Wire Line
-	5025 4525 4725 4525
+	1850 1600 2050 1600
 Wire Wire Line
-	5025 5625 4750 5625
+	1850 1500 2050 1500
 Wire Wire Line
-	5025 4925 4750 4925
-Text GLabel 5975 4125 2    60   BiDi ~ 0
-PTD5
+	1850 1900 3200 1900
+Wire Wire Line
+	1850 1800 3200 1800
+Wire Wire Line
+	2825 2100 4750 2100
+Wire Wire Line
+	3500 1900 4750 1900
+Wire Wire Line
+	3500 1800 4750 1800
+$Comp
+L GND #PWR?
+U 1 1 579F5C7F
+P 6250 4925
+F 0 "#PWR?" H 6250 4675 50  0001 C CNN
+F 1 "GND" H 6250 4775 50  0000 C CNN
+F 2 "" H 6250 4925 50  0000 C CNN
+F 3 "" H 6250 4925 50  0000 C CNN
+	1    6250 4925
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 4925 5975 4925
+$Comp
+L GND #PWR?
+U 1 1 579F5F33
+P 6250 3925
+F 0 "#PWR?" H 6250 3675 50  0001 C CNN
+F 1 "GND" H 6250 3775 50  0000 C CNN
+F 2 "" H 6250 3925 50  0000 C CNN
+F 3 "" H 6250 3925 50  0000 C CNN
+	1    6250 3925
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 3925 5975 3925
+$Comp
+L CONN_01X06 P4
+U 1 1 579F6106
+P 5775 4175
+F 0 "P4" H 5775 4525 50  0000 C CNN
+F 1 "CONN_01X06" V 5875 4175 50  0000 C CNN
+F 2 "" H 5775 4175 50  0000 C CNN
+F 3 "" H 5775 4175 50  0000 C CNN
+	1    5775 4175
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X06 P1
+U 1 1 579F629B
+P 5225 4175
+F 0 "P1" H 5225 3825 50  0000 C CNN
+F 1 "CONN_01X06" V 5325 4175 50  0000 C CNN
+F 2 "" H 5225 4175 50  0000 C CNN
+F 3 "" H 5225 4175 50  0000 C CNN
+	1    5225 4175
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
